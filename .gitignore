@@ -1,0 +1,44 @@
+# Entorno virtual
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Django
+db.sqlite3
+/media/
+/staticfiles/
+
+# Archivos de entorno
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Migraciones compiladas (opcional — NO borra migraciones)
+**/__pycache__/
+
+# pytest / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# uv cache local (si aparece)
+.uv/
