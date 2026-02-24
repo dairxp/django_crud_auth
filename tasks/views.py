@@ -37,13 +37,21 @@ def tasks(request):
 def create_task(request):
     if request.method == 'GET':
         return render(request, 'create_task.html', {
-        'form': TaskForm
-    })
+            'form': TaskForm
+        })
     else:
-        print(request.POST)
-        return render(request, 'create_task.html', {
-        'form': TaskForm
-    })
+        try:
+            form = TaskForm(request.POST)
+            new_task= form.save(commit=False)
+            new_task.user = request.user
+            #print(new_task)
+            new_task.save()
+            return redirect('tasks')
+        except ValueError:
+            return render(request, 'create_task.html', {
+                'form' : TaskForm,
+                'error' : 'Please provide valide data'
+            })
 
 def signout(request):
     logout(request)
