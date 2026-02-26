@@ -39,7 +39,4 @@ python manage.py runserver
 ## Despliegue Render
  
 Configurado para Render con WhiteNoise, PostgreSQL y variables de entorno.
-
-[Link Aqui :)](https://django-crud-auth-ibxf.onrender.com/
-
-🔗 https://django-crud-auth-ibxf.onrender.com/
+=> https://django-crud-auth-ibxf.onrender.com/
